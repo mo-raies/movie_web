@@ -1,0 +1,594 @@
+/* *{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(20, 3, 3);
+    font-family: "poppin",serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    width: 80%;
+    height: 90%;
+    border: 1px,solid white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 1px rgb(207, 180, 180);
+    position: relative;
+    overflow: hidden;
+}
+header::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background: url("/images/money\ heist.jpg") no-repeat center center/cover;
+    opacity: .6;
+    z-index: -1;
+}
+header::after{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background: linear-gradient(180deg,transprant,black);
+    z-index: -1;
+}
+header video{
+    position: absolute;
+    width: 130%;
+    height: 190%;
+    top: -47%;
+    z-index: -1;
+
+}
+nav{
+    width:100% ;
+    height:10%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header nav .logo_ul ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+header nav .logo_ul ul li {
+    padding: 3px 15px;
+}
+header nav .logo_ul ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 3s linear;
+}
+header nav .logo_ul ul li a {
+    color: rgb(230, 230, 230);
+}
+header nav .search_user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+header nav .search_user input{
+    padding: 3px 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255,.3);
+    color: white;
+    margin-right: 10px;
+}
+header nav .search_user input::placeholder{
+    color: white;
+}
+header nav .search_user img{
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+}
+header nav .search_user .search{
+   position: absolute;
+   height:190px ;
+   width: 320px;
+   border: 1px solid white;
+   top: 37px;
+   z-index: 99999;
+}
+header nav .search_user .search.card {
+    position: relative; 
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 5px; 
+    padding: 3px 0px; 
+}
+header nav .search_user .search .card::before{
+    content: '';
+    position: absolute; 
+    background-color: rgba(255, 255, 255, .1);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    border-radius: 5px;
+}
+header nav .search_user .search .card img{
+    width: 28px;
+    height: auto;
+    margin-left: 5px;
+    border-radius: 0px;
+
+}
+header nav .search_user .search .card .cont{
+    color: white;
+    margin-left: 45px;
+    margin-bottom: 30px;
+} */
+/* ////////////////////// */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(20, 3, 3);
+    font-family: "Poppins", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 80%;
+    height: 90%;
+    border: 1px solid white; /* Corrected border */
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 1px rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background: url("/images/money heist.jpg") no-repeat center center/cover;
+    opacity: .6;
+    z-index: -1;
+}
+
+header::after {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background: linear-gradient(180deg, transparent, black); /* Corrected typo */
+    z-index: -1;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Added for better fit */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+nav {
+    width: 100%;
+    height: 10%;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusted for better spacing */
+}
+
+header nav .logo_ul ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav .logo_ul ul li {
+    padding: 3px 15px;
+}
+
+header nav .logo_ul ul li a {
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+    font-size: 12px;
+    font-weight: bold;
+    transition: color 0.1s linear; /* Adjusted transition */
+}
+
+header nav .search_user {
+    display: flex;
+    align-items: center;
+}
+
+header nav .search_user input {
+    padding: 3px 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, .3);
+    color: white;
+    /* margin-right: 10px; */
+    margin-right: 84px;
+}
+
+header nav .search_user input::placeholder {
+    color: white;
+}
+
+header nav .search_user img {
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    margin-right: 12px; 
+}
+
+header nav .search_user .search {
+    position: absolute;
+    height: 175px;
+    width: 270px;
+    /* border: 1px solid white; */
+    top: 52px;
+    /* right: 0; */
+    margin-right: 12px;
+    z-index: 99999;
+    overflow-y:  auto;
+}
+header nav .search_user .search::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    visibility: hidden;
+}
+header nav .search_user .search::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 5px;
+    visibility: hidden;
+}
+header nav .search_user .search:hover:-webkit-scrollbar {
+   visibility: hidden;
+}
+header nav .search_user .search .card {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 5px;
+    padding: 3px 0; 
+    display: none;
+}
+
+header nav .search_user .search .card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    z-index: -1;
+}
+header nav .search_user .search .card img {
+    width: 28px;
+    height: 45px;
+    border-radius: 2px;
+    margin-left: 8px;
+}
+ header nav .search_user .search .card .cont {
+    margin-left: 5px;
+    color: white;
+   
+}
+
+header nav .search_user .search .card .cont h3{
+    font-size: 15px;
+    line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+header nav .search_user .search .card .cont p{
+    font-size: 10px;
+    color: rgba(255, 255, 255, .8);
+}
+header nav .search_user .search .card .cont span{
+    background-color: yellow;
+    color: black;
+    padding: 0px 3px;
+    margin: 0px 5px;
+} 
+header .content{
+    position: relative;
+    color: white;
+    margin-top: 50px;
+    padding-left: 50px;
+}
+header .content h1{
+    font-size: 40px;
+}
+header .content p{
+    font-size: 11px;
+    word-break: break-all;
+}
+header .content .details{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+header .content .details h6{
+    color: rgba(255, 255, 255, .8);
+    font-size: 10px;
+    margin-right: 10px;
+}
+header .content .details h5{
+    color: rgb(119, 255, 0,.7);
+    font-size: 10px;
+    margin-right: 10px;
+}
+header .content .details h4{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    margin-right: 10px;
+}
+header .content .details h3{
+    color: white;
+    font-size: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+header .content .details h3 span{
+    background-color: yellow;
+    color: black;
+    padding: 0px 3px;
+    font-weight: 100px;
+    font-size: 10px;
+    margin: 0px px px px;
+}
+header .content .details h3 i{
+    margin: 5px;
+}
+header .content .btn{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+header .content .btn a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+    background: linear-gradient(90deg,#00bdff,#0079ff);
+    border-radius: 5px;
+    padding: 8px 12px;
+    animation: button 1s linear infinite;
+
+}
+@keyframes button{
+    15%{background: linear-gradient(90deg,#00bdff,#0079ff);}
+    30%{background: linear-gradient(1200deg,#00bdff,#0079ff);}
+    48%{background: linear-gradient(180deg,#00bdff,#0079ff);}
+    67%{background: linear-gradient(270deg,#00bdff,#0079ff);}
+    80%{background: linear-gradient(323eg,#00bdff,#0079ff);}
+    100%{background: linear-gradient(360deg,#00bdff,#0079ff);}
+}
+header .section{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    color: #ffff;
+    bottom: 20px;
+    padding: 0px 50px; 
+}
+header .section .cards{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid white; */
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+header .section .cards::-webkit-scrollbar{
+    display: none;
+}
+header .section .cards .card{
+    position: relative;
+    min-width: 132px;
+    height: 180px;
+    /* border: 1px solid white; */
+    background-color: black;
+    margin-right: 10px;
+    transition: .3s linear;
+}
+header .section .cards .card .poster{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+header .section .cards .card:hover{
+    min-width: 300px;
+    overflow: hidden;
+}
+header .section .cards .card .rest_card{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+header .section .cards .card .rest_card img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    z-index: -1;
+}
+header .section .cards .card .rest_card::after {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background: linear-gradient(180deg, transparent, black); /* Corrected typo */
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+header .section .cards .card .rest_card .cont{
+    position: absolute;
+    color: white;
+    width: 100%;
+    bottom: 10px;
+    padding: 0px 20px;
+}
+header .section .cards .card .rest_card .cont .sub{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+header .section .cards .card .rest_card .cont .sub p{
+   font-size: 12px;
+   font-weight: 300;
+   color: rgba(255, 255, 255, .7);
+}
+header .section .cards .card .rest_card .cont .sub h3{
+   font-size: 12px; 
+   display: flex;
+   align-items: center;
+   color: rgba(255, 255, 255, 255);
+}
+header .section .cards .card .rest_card .cont .sub h3 span{
+    background-color: yellow;
+    color: black;
+    padding: 0px 3px;
+    font-weight: 100px;
+    font-size: 10px;
+    margin: 0px 5px 0px 10px;
+}
+header .section .cards .card .rest_card .cont .sub h3 i{
+    margin: 3px;
+}
+header .section .cards .card:hover .rest_card{
+    opacity: 1;
+}
+header .section .bi-chevron-left,
+.bi-chevron-right{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, .3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: .3s linear;
+    cursor: pointer;
+    z-index: 999999999;
+    opacity: 0;
+}
+header .section .bi-chevron-right{
+    left: unset;
+    right: 3%;
+}
+header .section:hover .bi-chevron-right{
+    opacity: 1;
+}
+header .section:hover .bi-chevron-left{
+    opacity: 1;
+}
+
+
+
+@media (max-width: 1000px) {
+    .logo_ul ul {
+      flex-direction: column;
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: white;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+    }
+  
+    .logo_ul ul.show {
+      display: flex;
+    }
+  
+    .logo_ul {
+      position: relative;
+    }
+  
+    .menu-toggle {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  
+    .search_user {
+      display: none;
+    }
+    header .content{
+        margin-top: 181px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
